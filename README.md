@@ -11,8 +11,8 @@ All queries are **sanitized** (generalized table/column names for confidentialit
 | # | File | Description | Key Techniques |
 |---|------|-------------|----------------|
 | 1 | queries/assay_results_sanitized.sql | Comprehensive QC dashboard for multiple samples (yields, purity, stability, etc.) | Early filtering for perf win, ROW_NUMBER ranking, wide joins, CASE corrections |
-| 2 | queries/binders_sanitized.sql | Analyze process compositions with multiple components (Fab/Fc types, linkers) | Nested CTEs per component, JSONB handling, orientation filtering |
-| 3 | queries/cdrs_sanitized.sql | Extract CDR sequences for entities in one row | CTE for chain filtering, COALESCE-safe concatenation |
+| 2 | queries/binders_sql_sanitized.sql | Analyze process compositions with multiple components (Fab/Fc types, linkers) | Nested CTEs per component, JSONB handling, orientation filtering |
+| 3 | queries/cdrs_sql_sanitized.sql | Extract CDR sequences for entities in one row | CTE for chain filtering, COALESCE-safe concatenation |
 
 ## Why These Queries?
 - Real-world messiness: Repetitions, quirks, and optimizations I chose not to "AI-refactor" because they worked best.
